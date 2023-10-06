@@ -46,7 +46,7 @@ async function fetchUsers(){
         try{
             await Promise.all([createPost({title:'post3', body:'thid is post3'}),updateLastUserActivity()]);
             console.log('all posts')
-            Posts.foreach((post)=>{
+            post.foreach((post)=>{
                 console.log(post.title);
 
             });
